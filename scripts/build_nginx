@@ -4,7 +4,7 @@
 # image. More information on the Heroku Stack can be found
 # at https://devcenter.heroku.com/articles/stack
 
-NGINX_VERSION=${NGINX_VERSION-1.25.1}
+NGINX_VERSION=${NGINX_VERSION-1.18.0}
 PCRE_VERSION=${PCRE_VERSION-8.44}
 HEADERS_MORE_VERSION=${HEADERS_MORE_VERSION-0.33}
 ZLIB_VERSION=${ZLIB_VERSION-1.2.11}
@@ -61,8 +61,6 @@ echo "Downloading $uuid4_url"
     --with-pcre=pcre-${PCRE_VERSION} \
     --with-zlib=zlib-${ZLIB_VERSION} \
     --with-http_gzip_static_module \
-    --with-http_v2_module \
-    --with-ngx_http_v2_module \
     --with-http_realip_module \
     --with-http_ssl_module \
     --prefix=/tmp/nginx-debug \
